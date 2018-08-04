@@ -1,0 +1,686 @@
+\documentclass[a4paper,11pt,oneside,titlepage,final]{scrartc}
+%scrreprt
+\newcommand{\centeredelement}[2][]{\begingroup\centering#1#2\par\endgroup}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\begin{document}
+
+\begin{titlepage}
+\setlength{\parindent}{0pt}
+
+\begin{flushright}
+{\bfseries\scshape Apuntes}\\
+{\small\sffamily v 1.0\par}
+\end{flushright}
+
+\vspace{\stretch{.25}}
+
+\centeredelement[\huge]{%
+  Notas sobre
+}
+
+\vspace{\stretch{.25}}
+
+\centeredelement[\huge\bfseries]{%
+   Lógica proposicional
+}
+
+\vspace{\stretch{.25}}
+
+\centeredelement{\today}
+
+\vspace{\stretch{.25}}
+
+\textbf{David Alejandro Trejo Pizzo}
+\par
+\smallskip
+\hrule
+\smallskip
+\begin{tabular}{@{}ll@{}}
+Este apunte contiene material de varias fuentes, las cuales son debidamente citadas al\\ final del documento.\\ 
+\end{tabular}
+\end{titlepage}
+
+\newpage
+
+\tableofcontents
+\newpage
+
+
+\section{Proposiciones y Tablas de Verdad}
+
+La lógica se ocupa de los \textbf{métodos del razonamiento}. Uno de los objetivos fundamentales es sistematizar y codificar principios de los razonamientos validos con el objeto de formar o construir argumentaciones o deducciones que sean correctas. Un argumento o deducción consta esencialmente de un conjunto de sentencias (afirmaciones) que forman lo que se llaman \textbf{premisas} o \textbf{hipótesis} de las cuales otra sentencia, llamada \textbf{conclusión}, es deducida o inferida.\\
+
+En el desarrollo de cualquier teoría matemática se hacen afirmaciones en forma de frases. Tales afirmaciones, verbales o escritas, las denominaremos enunciados o \textbf{proposiciones}.\\
+
+\subsection{Proposición}
+
+En el lenguaje ordinario nos encontramos constantemente con sentencias que han sido formadas uniendo frases mas pequeñas por medio de ciertas palabras, como las palabras \textbf{no}, \textbf{y}, \textbf{o}, \textbf{y por si$\ldots$ entonces (o implica)$\ldots$}, \textbf{si y solo si}, etc. Estas palabras son llamadas \textbf{conectivos proposicionales} o \textbf{conectivos lógicos}.\\
+
+Ahora vamos a definir el lenguaje de la Lógica Proposicional Clásica. Este lenguaje es un conjunto de símbolos con los cuales formamos cadenas de elementos de. Las cadenas no se construyen de una manera arbitraria. Daremos reglas precisas para la formación de dichas cadenas, las cuales serán llamadas formulas.\\
+
+\begin{quote}
+\textbf{Proposición es cualquier afirmación que sea verdadera o falsa, pero no ambas cosas a la vez.}
+\end{quote}
+
+
+\subsubsection*{Ejemplo 1}
+Las siguientes afirmaciones son proposiciones:
+\begin{enumerate}
+\item Gabriel García Marquez escribió Cien años de soledad.
+\item 6 es un numero primo.
+\item 3+2=6
+\item 1 es un numero entero, pero 2 no lo es.
+\end{enumerate}
+
+\paragraph{Nota:} las proposiciones se notan con letras minúsculas, como por ejemplo \textbf{p}, \textbf{q}, \textbf{r}. La notación \textbf{p: Tres mas cuatro es igual a siete} se utiliza para definir que \textbf{p} es la proposición \textbf{tres mas cuatro es igual a siete}. Este tipo de proposiciones se llaman simples, ya que \textbf{no} pueden descomponerse en otras.
+
+\subsubsection*{Ejemplo 2}
+Las siguientes no son proposiciones:
+\begin{enumerate}
+\item x + y > 5
+\item ¿Te vas?
+\item Compra cinco azules y cuatro rojas.
+\item x = 2
+\end{enumerate}
+
+En efecto, (1) es una afirmación pero no es una proposición ya que puede ser verdadera o falsa dependiendo de los valores de x e y. Lo mismo ocurre con la afirmación (4). Los ejemplos (2) y (3) no son afirmaciones, por lo tanto no son proposiciones.\\
+
+\paragraph{Nota:} Es importante ver que desde el punto de vista lógico carece de importancia cual sea el contenido material de los enunciados, solamente interesa su valor de verdad.\\
+
+\subsection{Valor de Verdad}
+
+Llamaremos valor de verdad de una proposición a su veracidad o falsedad. El valor de verdad de una proposición verdadera es verdad y el de una proposición falsa es falso.\\
+
+\subsubsection*{Ejemplo 1}
+Primero comprobar cuales de las siguientes afirmaciones son proposiciones y luego determinar el valor de verdad de aquellas que lo sean.
+
+\begin{enumerate}
+\item p: Existe Premio Nobel de informática.
+\item q: La tierra es el único planeta del Universo que tiene vida.
+\item r: Teclee Escape para salir de la aplicación.
+\item s: Cinco mas siete es grande.
+\end{enumerate}
+
+\paragraph{Solución}
+
+\begin{itemize}
+\item \textbf{p} es una proposición falsa, es decir su valor de verdad es Falso.
+\item No sabemos si \textbf{q} es una proposición ya que desconocemos si esta afirmación es verdadera o falsa.
+\item \textbf{r} no es una proposición ya que no es verdadera ni es falsa. Es un mandato.
+\item \textbf{s} no es una proposición ya que su enunciado, al carecer de contexto, es ambiguo. En efecto, cinco niñas mas siete niños es un numero grande de hijos en una familia, sin embargo cinco monedas de cinco centavos mas siete monedas de 10 centavos no constituyen una cantidad de dinero grande.
+\end{itemize}
+
+
+\subsection{Proposición compuesta}
+
+Si las proposiciones simples $p1, p2, \ldots, pn$ se combinan para formar la proposición \textbf{P}, diremos que \textbf{P} es una proposición compuesta de $p1, p2, \ldots, pn$.
+
+\subsubsection*{Ejemplo 1}
+\begin{center}
+\textbf{La Matemática Discreta es mi asignatura preferida y Mozart fue un gran compositor.}
+\end{center}
+
+Es una proposición compuesta por las proposiciones \textbf{La Matemática Discreta es mi asignatura preferida} y \textbf{Mozart fue un gran compositor}.
+
+\subsubsection*{Ejemplo 2}
+\begin{center}
+\textbf{El es inteligente o estudia todos los días.}
+\end{center}
+
+Es una proposición compuesta por dos proposiciones: \textbf{El es inteligente} y \textbf{El estudia todos los días}.
+
+\paragraph{Nota:} La propiedad fundamental de una proposición compuesta es que su valor de verdad esta completamente determinado por los valores de verdad de las proposiciones que la componen junto con la forma en que están conectadas.
+
+\subsection{Variables de Enunciado}
+
+Es una proposición arbitraria con un valor de verdad no especificado, es decir, puede ser verdad o falsa. En el calculo lógico, prescindiremos de los contenidos de los enunciados y los sustituiremos por variables de enunciado. Toda variable de enunciado \textbf{p}, puede ser sustituida por cualquier enunciado siendo sus posibles estados, verdadero o falso. El conjunto de los posibles valores de una proposición \textbf{p}, los representaremos en las llamadas tablas de verdad, ideadas por L. Wittgenstein.
+
+\subsection{Tablas de Verdad}
+
+
+La tabla de verdad de una proposición compuesta \textbf{P} enumera todas las posibles combinaciones de los valores de verdad para las proposiciones $p1,p2,\ldots,pn$. Para saber cuantos renglones debe tener una tabla de verdad, tenemos que saber la cantidad de proposiciones que tiene la proposición compuesta. El resultado se calcula elevando 2 a ese valor. Formula:
+
+$$2^{cantidad~de~proposiciones} = cantidad~de~renglones$$
+
+\subsubsection*{Ejemplo 1}
+
+Por ejemplo, si \textbf{P} es una proposición compuesta por las proposiciones simples $p1$, $p2$ y $p3$ , entonces la tabla de verdad de \textbf{P} deberá tener 8 renglones ($2^{3}=8$) para poder tener todas las combinaciones de valores de verdad posibles.\\
+
+\begin{tabular}{|c|c|c|}
+\hline 
+p1 & p2 & p3 \\ 
+\hline 
+V & V & V \\ 
+\hline 
+V & V & F \\ 
+\hline 
+V & F & V \\ 
+\hline 
+V & F & F \\ 
+\hline 
+F & V & V \\ 
+\hline 
+F & V & F \\ 
+\hline 
+F & F & V \\ 
+\hline 
+F & F & F \\ 
+\hline 
+\end{tabular}
+
+\subsubsection*{Ejemplo 2}
+
+Si la cantidad de proposiciones es 4, entonces nuestra tabla de verdad tendrá $2^{4} = 16$ renglones.\\ 
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+p1 & p2 & p3 & p4 \\ 
+\hline 
+V & V & V & V \\ 
+\hline 
+V & V & V & F \\ 
+\hline 
+V & V & F & V \\ 
+\hline 
+V & V & F & F \\ 
+\hline 
+V & F & V & V \\ 
+\hline 
+V & F & V & F \\ 
+\hline 
+V & F & F & V \\ 
+\hline 
+V & F & F & F \\ 
+\hline 
+F & V & V & V \\ 
+\hline 
+F & V & V & F \\ 
+\hline 
+F & V & F & V \\ 
+\hline 
+F & V & F & F \\ 
+\hline 
+F & F & V & V \\ 
+\hline 
+F & F & V & F \\ 
+\hline 
+F & F & F & V \\ 
+\hline 
+F & F & F & F \\ 
+\hline 
+\end{tabular} 
+
+
+
+\newpage
+\section{Conexión entre Proposiciones}
+
+En esta parte del apunte veremos las distintas formas de conectar proposiciones.
+
+\subsection{Conjunción}
+
+\begin{quote}
+Dadas dos proposiciones cualesquiera p y q, llamaremos conjunción de ambas a la proposición compuesta \textbf{p y q} y la notaremos $p \wedge q$. Esta proposición sera verdadera únicamente en el caso de que ambas proposiciones lo sean.\\
+\end{quote}
+
+De la definición dada se aprecia que si $p$ y $q$ son verdaderas entonces $p \wedge q$ es verdad y que si al menos una de las dos es falsa, entonces $p \wedge q$ es falsa. Por lo tanto su tabla de verdad seria así:\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+p & q & $p \wedge q$ \\ 
+\hline 
+V & V & V \\ 
+\hline 
+V & F & F \\ 
+\hline 
+F & V & F \\ 
+\hline 
+F & F & F \\ 
+\hline 
+\end{tabular}
+\end{center}
+
+El razonamiento puede hacerse a la inversa, es decir si $p \wedge q$ es verdad, entonces $p \wedge q$ son, ambas, verdad y que si $p \wedge q$ es falsa, entonces por lo menos una de las dos ha de ser falsa.
+
+\subsection{Disyunción}
+
+\begin{quote}
+Dadas dos proposiciones \textbf{p y q}, llamaremos disyunción de ambas a la proposición compuesta $p \vee q$. Esta proposición sera verdadera si al menos una de las dos, \textbf{p} o \textbf{q}, lo es.
+\end{quote}
+
+De acuerdo con la definición se sigue que si una de las dos, $p \vee q$, es verdad entonces $p \vee q$ es verdad y que $p \vee q$ sera falsa, únicamente si ambas lo son.\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+p & q & $p \vee q$ \\ 
+\hline 
+V & V & V \\ 
+\hline 
+V & F & V \\ 
+\hline 
+F & V & V \\ 
+\hline 
+F & F & F \\ 
+\hline 
+\end{tabular}
+\end{center}
+
+Al igual que en la conjunción, podemos razonar en sentido inverso. Si $p \vee q$ es verdad, entonces una de las dos, al menos, ha de ser verdad y si $p \vee q$ es falsa, entonces ambas han de ser falsas. El conectivo \textbf{o} se usa en el lenguaje ordinario de dos formas distintas.
+
+\subsection{Disyunción Exclusiva}
+
+Dadas dos proposiciones cualesquiera p y q, llamaremos disyunción exclusiva de ambas a la proposición compuesta \textbf{p o q pero no ambos} y la notaremos $p~\underline{\vee}~q$. Esta proposición sera verdadera si una u otra, pero no ambas son verdaderas.\\
+
+Según esta definición una disyunción exclusiva de dos proposiciones p y q sera verdadera cuando tengan distintos valores de verdad y falsa cuando sus valores de verdad sean iguales. Su tabla de verdad es, por tanto:\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+p & q & $p~\underline{\vee}~q$ \\ 
+\hline 
+V & V & F \\ 
+\hline 
+V & F & V \\ 
+\hline 
+F & V & V \\ 
+\hline 
+F & F & F \\ 
+\hline 
+\end{tabular}
+\end{center}
+
+Haciendo el razonamiento contrario si \textbf{p y q} es verdad, únicamente podemos asegurar que una de las dos es verdad y si \textbf{p y q} es falsa, solo podemos deducir que ambas tienen el mismo valor de verdad.\\
+
+\paragraph{Nota:} Salvo que especifiquemos lo contrario, \textbf{o} sera usado en el primero de los sentidos. Esta discusión pone de manifiesto la precision que ganamos con el lenguaje simbólico.
+
+\subsection{Negación}
+
+Dada una proposición cualquiera $p$ llamaremos \textbf{negación de p} a la proposición \textbf{no p} y la notaremos $\sim$p. Seria verdadera cuando $p$ sea falsa y falsa cuando $p$ sea verdadera.\\
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+p & q & $\sim q$ & $p~\wedge \sim q$ & $\sim (p~\wedge \sim q)$ \\ 
+\hline 
+V & V & F & F & V \\ 
+\hline 
+V & F & V & V & F \\ 
+\hline 
+F & V & F & F & V \\ 
+\hline 
+F & F & V & F & V \\ 
+\hline 
+\end{tabular} 
+
+\subsection{Proposición condicional}
+
+Dadas dos proposiciones \textbf{p} y \textbf{q}, a la proposición compuesta 
+$$si~p~entonces~q$$
+
+se le llama \textbf{proposición condicional} y se nota por
+
+$$ p \longrightarrow q $$
+
+A la proposición \textbf{p} se le llama hipótesis, antecedente, premisa o \textbf{condición suficiente} y a la \textbf{q} tesis, consecuente, conclusión o \textbf{condición necesaria} del condicional. Una proposición condicional es falsa únicamente cuando siendo verdad la hipótesis, la conclusión es falsa (\textbf{no se debe deducir una conclusión falsa de una hipótesis verdadera}). De acuerdo con esta definición su tabla de verdad es:\\
+
+\begin{tabular}{|c|c|c|}
+\hline 
+p & q & $p \longrightarrow q$ \\ 
+\hline 
+V & V & V \\ 
+\hline 
+V & F & F \\ 
+\hline 
+F & V & V \\ 
+\hline 
+F & F & V \\ 
+\hline 
+\end{tabular} \\
+
+Otras formas equivalentes de la proposición condicional $p \longrightarrow q$ son:
+\begin{itemize}
+\item p solo si q
+\item q si p
+\item p es una condición suficiente para q
+\item q es una condición necesaria para p
+\item q se sigue de p
+\item q es condición de p
+\item q es una consecuencia lógica de p
+\item q cuando p
+\end{itemize}
+
+
+
+\subsection{Proposición bicondicional}
+
+Dadas dos proposiciones \textbf{p} y \textbf{q}, a la proposición compuesta 
+$$p~si~y~solo~si~q$$
+se le llama \textbf{proposición bicondicional} y se nota por 
+$$p \longleftrightarrow q$$
+
+La interpretación del enunciado es \textbf{p solo si q y p si q}, o lo que es igual, \textbf{si p, entonces q y si q, entonces p}, es decir,
+$$(p \longrightarrow q) \wedge (q \longrightarrow p)$$
+Por tanto, su tabla de verdad es:\\
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+p & q & $ p \longrightarrow q $ & $ q \longrightarrow p $ & $p \longleftrightarrow q$ \\ 
+\hline 
+V & V & V & V & V \\ 
+\hline 
+V & F & F & V & F \\ 
+\hline 
+F & V & V & F & F \\ 
+\hline 
+F & F & V & V & V \\ 
+\hline 
+\end{tabular} 
+
+\subsubsection*{Ejemplo}
+
+Sean \textbf{a}, \textbf{b} y \textbf{c} las longitudes de los lados de un triangulo \textbf{T} siendo \textbf{c} la longitud mayor. El enunciado:
+\begin{center}
+T es rectángulo si, y solo si $a^{2} + b^{2} = c^{2}$
+\end{center}
+
+puede expresarse simbólicamente como
+$$ p \longleftrightarrow q $$
+
+donde \textbf{p} es la proposición \textbf{T es rectángulo} y q la proposición $a^{2} + b^{2} = c^{2}$.\\
+
+\begin{flushleft}
+Podemos observar también que la proposición anterior afirma dos cosas
+\end{flushleft}
+
+\begin{enumerate}
+\item Si T es rectángulo, entonces $a^{2} + b^{2} = c^{2}$\\
+o también, una condición necesaria para que T sea rectángulo es que $a^{2} + b^{2} = c^{2}$
+\item Si $a^{2} + b^{2} = c^{2}$, entonces T es rectángulo\\
+o también, una condición suficiente para que T sea rectángulo es que $a^{2} + b^{2} = c^{2}$
+\end{enumerate}
+
+\begin{flushleft}
+Consecuentemente, una forma alternativa de formular la proposición dada es:\\
+\end{flushleft}
+
+\begin{center}
+Una condición necesaria y suficiente para que T sea rectángulo es que $a^{2} + b^{2} = c^{2}$
+\end{center}
+
+
+
+
+
+
+\newpage
+\section{Clasificación de las proposiciones compuestas}
+
+
+\subsection{Tautología}
+
+Las tautologías son identidades lógicas que siempre serán verdaderas. Son usadas principalmente para pruebas proposicionales.}}
+
+\subsubsection*{Ejemplo}
+
+La expresión es $(p \wedge \sim q) \longrightarrow (q \vee p)$. Como puede observarse, hay 2 proposiciones (p y q) por lo que la cantidad de renglones a completar sera $2^{2}=4$.
+
+\begin{array}{ccccccc}
+(p & $\wedge$ & $\sim$q) & $\longrightarrow$ & (q & $\vee$ & p) \\ 
+V & F & F & \textbf{V} & V & V & V \\ 
+V & V & V & \textbf{V} & F & V & V \\ 
+F & F & F & \textbf{V} & V & V & F \\ 
+F & F & V & \textbf{V} & F & F & F \\ 
+\end{array} 
+
+
+\subsection{Contingencia}
+
+Se utilizan para hacer circuitos de control y automatismo, surgen cuando en dos proposiciones, su equivalencia es verdadera y falsa a la vez.
+
+\subsubsection*{Ejemplo}
+
+La expresión es $[p \longrightarrow (q \vee \sim p)] \longrightarrow \sim q$. Como puede observarse, hay 2 proposiciones (p y q) por lo que la cantidad de renglones a completar sera $2^{2}=4$.
+
+\begin{array}{ccccccc}
+[p & $\longrightarrow$ & (q & $\vee$ & $\sim$p)] & $\longrightarrow$ & $\sim$q \\ 
+V & V & V & V & F & \textbf{F} & F \\  
+V & F & F & F & F & \textbf{V} & V \\ 
+F & V & V & V & V & \textbf{F} & F \\ 
+F & V & F & V & V & \textbf{V} & V \\ 
+\end{array} 
+
+
+\subsection{Contradicción}
+
+Es cuando una proposición compuesta es falsa para todas las combinaciones de valores de verdad de las proposiciones que la componen.
+
+\subsubsection*{Ejemplo}
+
+La expresión es $(p \wedge q) \longleftrightarrow (\sim p \vee \sim q)$. Como puede observarse, hay 2 proposiciones (p y q) por lo que la cantidad de renglones a completar sera $2^{2}=4$.
+
+\begin{array}{ccccccc}
+(p & $\wedge$ & $\sim$q) & $\longleftrightarrow$ & ($\sim$p & $\vee$ & $\sim$q) \\ 
+V & V & V & \textbf{F} & F & F & F \\ 
+V & F & F & \textbf{F} & F & V & V \\ 
+F & F & V & \textbf{F} & V & V & F \\ 
+F & F & F & \textbf{F} & V & V & V \\ 
+\end{array} 
+
+
+\paragraph{Nota:} Los valores de verdad de una proposición compuesta, pueden determinarse a menudo, construyendo una tabla de verdad abreviada. Por ejemplo, si queremos probar que una proposición es una contingencia, es suficiente con que consideremos dos lineas de su tabla de verdad, una que haga que la proposición sea verdad y otra que la haga falsa. Para determinar si una proposición es una tautologia, bastaría considerar, únicamente, aquellas lineas para las cuales la proposición pueda ser falsa.
+
+
+\subsection{Proposición contraria}
+
+Dada la proposición condicional $p \longrightarrow q$, su reciproca es la proposición, también condicional, $ \sim p \longrightarrow \sim q$.
+
+\paragraph{Ejemplo:}
+
+\begin{center}
+Si 2 + 2 es igual a 4, entonces 3 + 3 es igual a 6.
+\end{center}
+
+\begin{flushleft}
+donde:\\
+p: 2 + 2 = 4\\
+q: 3 + 3 = 6\\
+\end{flushleft}
+
+\begin{flushleft}
+La proposición contraria seria: $ \sim p \longrightarrow \sim q$\\
+\end{flushleft}
+
+\begin{center}
+Si 2 + 2 no es igual a 4, entonces 3 + 3 no es igual a 6.
+\end{center}
+
+\subsection{Proposición reciproca}
+
+Dada la proposición condicional $p \longrightarrow q$, su reciproca es la proposición, también condicional, $q \longrightarrow p$.
+
+\paragraph{Ejemplo:}
+
+\begin{center}
+Si la salida no va a la pantalla, entonces los resultados se dirigen a la impresora
+\end{center}
+
+\begin{flushleft}
+donde:\\
+p: la salida no va a la pantalla.\\
+q: los resultados se dirigen a la impresora.\\
+\end{flushleft}
+
+\begin{flushleft}
+La proposición reciproca seria: $q \longrightarrow p$\\
+\end{flushleft}
+
+\begin{center}
+Si los resultados se dirigen a la impresora, entonces la salida no va a la pantalla.
+\end{center}
+
+\subsection{Proposición contra reciproca}
+
+Dada la proposición condicional$p \longrightarrow q$, su contra reciproca es la proposición, también condicional, $ \sim q \longrightarrow \sim p$.\\
+
+\paragraph{Ejemplo:}tomemos como ejemplo la siguiente proposición compuesta 
+
+\begin{center}
+Si María estudia mucho, entonces es buena estudiante.
+\end{center}
+
+\begin{flushleft}
+donde:\\
+p: María estudia mucho.\\
+q: María es buena estudiante.\\
+\end{flushleft}
+
+\begin{flushleft}
+La proposición contra reciproca seria: $ \sim q \longrightarrow \sim p$\\
+\end{flushleft}
+
+\begin{center}
+Si María no es buena estudiante, entonces no estudia mucho.
+\end{center}
+
+\subsection{Resumen}
+
+Podemos resumir la formación de proposiciones reciprocas, contra reciprocas y contrarias de la siguiente forma.
+\begin{itemize}
+\item Directa: $p \longrightarrow q$
+\item Contraria: $ \sim p \longrightarrow \sim q$
+\item Reciproca: $q \longrightarrow p$
+\item Contra reciproca: $ \sim q \longrightarrow \sim p$
+\end{itemize}
+
+\newpage
+\section{Implicación}
+
+\begin{quote}
+\textbf{Se dice que la proposición $P$ implica lógicamente la proposición $Q$, y se escribe $P \Longrightarrow Q$, si $Q$ es verdad cuando $P$ es verdad.}
+\end{quote}
+
+Es importante destacar que esto es equivalente a decir que $P \Longrightarrow Q$ es falso si $P$ es falso cuando $Q$ es falso, ya que si $P$ es verdad siendo $Q$ falso, no se cumplir la definición anterior.\\
+
+\subsection{Implicaciones Lógica mas Comunes}
+
+\begin{itemize}
+\item Adición.
+$$P \Longrightarrow (P \vee Q)$$
+\item Simplificación
+$$(P \wedge Q) \Longrightarrow P$$
+\item Modus Ponendo Ponens: dado un condicional y afirmando (“Ponendo”) el antecedente, se puede afirmar (“Ponens”) el consecuente.
+$$[(P \longrightarrow Q) \wedge P] \Longrightarrow Q$$
+\item Modus Tollendo Tollens: dado un condicional y negando (“Tollendo”) el consecuente, se puede negar (“Tollens”) el antecedente.
+$$[(P \longrightarrow Q) \wedge \sim Q] \Longrightarrow \sim P$$
+\item Leyes de los silogismos hipotéticos
+$$[(P \longrightarrow Q) \wedge (Q \longrightarrow R)] \Longrightarrow (P \longrightarrow R)$$
+$$[(P \longleftrightarrow Q) \wedge (Q \longleftrightarrow R)] \Longrightarrow (P \longleftrightarrow R)$$
+\item Leyes de los silogismos disyuntivos
+$$[\sim P \wedge (P \vee Q)] \Longrightarrow Q$$
+$$[P \wedge (\sim P \vee \sim Q] \Longrightarrow \sim Q$$
+\item Ley del Dilema constructivo
+$$[(P \longrightarrow Q) \wedge (R \longrightarrow S) \wedge (P \vee R)] \Longrightarrow (Q \vee S)$$
+\item Contradicción
+$$(P \longrightarrow C) \Longrightarrow \sim P$$
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\section{Equivalencia Lógica}
+
+\begin{quote}
+\textbf{Las proposiciones compuestas $P$ y $Q$ son lógicamente equivalentes y se escribe $P \equiv Q$. El símbolo de la equivalencia lógica es $\Longleftrightarrow$.}
+\end{quote}
+
+Esta definición es el punto de partida para probar que dos proposiciones son lógicamente equivalentes. Hay que probar que si $P$ es verdad, $Q$ también ha de serlo y que si $P$ es falso, $Q$ tiene que ser falso. Otra forma de demostrar lo mismo es probar que $P$ es verdad partiendo de que $Q$ lo es y probar que si $Q$ es falso, entonces $P$ también lo es.\\
+
+
+\subsection{Equivalencias Lógicas mas Comunes}
+
+Al igual que en la implicación lógica, veamos una tabla con las equivalencias lógicas mas útiles junto con los nombres que reciben:
+
+\begin{itemize}
+\item Idempotencia de la conjunción y la disyunción.
+$$(P \wedge P) \Longleftrightarrow P$$
+$$(P \vee P) \Longleftrightarrow P$$
+\item Conmutatividad de la conjunción y la disyunción.
+$$(P \wedge Q) \Longleftrightarrow (Q \wedge P)$$
+$$(P \vee Q) \Longleftrightarrow (Q \vee P)$$
+\item Asociatividad de la conjunción y la disyunción.
+$$[(P \wedge Q) \wedge R] \Longleftrightarrow [P \wedge (Q \wedge R)]$$
+$$[(P \vee Q) \vee R] \Longleftrightarrow[P \vee (Q \vee R)]$$
+\item Distributividad de $\wedge$ respecto de $\vee$ y viceversa.
+$$[P \wedge (Q \vee R)] \Longleftrightarrow [(P \wedge Q) \vee (P \wedge R)]$$
+$$[P \vee (Q \wedge R)] \Longleftrightarrow [(P \vee Q) \wedge (P \vee R)]$$
+\item Leyes de De Morgan
+$$\sim(P \vee Q) \Longleftrightarrow (\sim~P \wedge \sim~Q)$$
+$$\sim(P \wedge Q) \Longleftrightarrow (\sim~P \vee \sim~Q)$$
+\item Leyes de dominación
+$$P \vee T \Longleftrightarrow T$$
+$$P \wedge C \Longleftrightarrow C$$
+\item Leyes de identidad
+$$P \wedge T \Longleftrightarrow P$$
+$$P \vee C \Longleftrightarrow P$$
+\item Doble negación
+$$\sim \sim P \Longleftrightarrow P$$
+\item Implicación
+$$(P \Longrightarrow Q) \Longleftrightarrow (\sim P \vee Q)$$
+\item Exportación
+$$[P \Longrightarrow (Q \Longrightarrow R)] \Longleftrightarrow [(P \wedge Q) \Longrightarrow R]$$
+\item Contra reciproco
+$$(P \Longrightarrow Q) \Longleftrightarrow (\sim Q \Longrightarrow \sim P )$$
+\item Reducción al absurdo
+$$(P \Longrightarrow Q) \Longleftrightarrow [(P \wedge \sim Q) \Longrightarrow C]$$
+\end{itemize}
+
+\newpage
+\section{Razonamiento}
+
+\textbf{Llamaremos de esta forma a cualquier proposición con la estructura
+$$P_{1} \wedge P_{2} \wedge \ldots \wedge P_{n} \Longrightarrow Q$$
+siendo n un entero positivo.}}}
+
+A las proposiciones $P_{i}$, con $i=1, 2, \ldots , n$ se les llama premisas del razonamiento y a la proposición $Q$, conclusión.
+
+\subsection{Razonamiento valido}
+
+El razonamiento anterior se dice que es valido si la conclusión Q es verdadera cada vez que todas las premisas $P_{1} \wedge P_{2} \wedge \ldots \wedge P_{n}$ lo sean. Esto significa que las premisas implican lógicamente la conclusión, es decir, un razonamiento seria valido cuando
+
+$$P_{1} \wedge P_{2} \wedge \ldots \wedge P_{n} \Longrightarrow Q$$
+
+También podemos decir que el razonamiento es valido si el condicional
+
+$$P_{1} \wedge P_{2} \wedge \ldots \wedge P_{n} \Longrightarrow Q$$
+
+es una tautologia. Esto, a su vez, nos permite aceptar como valido el razonamiento en el caso de que alguna de las premisas sea falsa. En efecto, si alguna de las $P_{i}$, con $i=1, 2, \ldots , n$ es falsa, entonces $P_{1} \wedge P_{2} \wedge \ldots \wedge P_{n}$ seria falsa, luego el condicional $P_{1} \wedge P_{2} \wedge \ldots \wedge P_{n} \Longrightarrow Q$ es verdadero, independientemente del valor de verdad de la conclusión Q.
+
+\newpage
+\section{Referencias}
+
+\begin{itemize}
+\item Armando Rojo, Álgebra I.
+\item Copi, Irving M. Introduccion a la Logica. 1er ed. Buenos Aires: Eudeba, 1999.
+\item Tuchsznaider, Ester Ruth. Pensamiento Critico. 1er ed. Buenos Aires:  Temas Grupo Editorial, 2001.
+\item Gonzalez Gutierrez, Francisco Jose. Lógica de Proposiciones.\\ http://www2.uca.es/matematicas/Docencia/2005-2006/ESI/1710040/Apuntes/Leccion1.pdf
+\item Sacerdoti, Juan. Elementos de lógica.\\ http://materias.fi.uba.ar/61107/Apuntes/Lo00.pdf
+\end{itemize}
+
+
+\end{document}
